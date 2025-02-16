@@ -6,9 +6,9 @@ import { Progress } from "@/components/ui/progress"
 import { ArrowRight, Building2, CheckCircle, FileText, PlayCircle, Settings, Users } from "lucide-react"
 import Link from "next/link"
 
-export default function WelcomePage() {
+export default function WelcomePage() { 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-b from-background via-background/95 to-background/90">
+    <div className="flex flex-col items-center justify-center">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-grid-white/10 bg-[size:60px_60px]" />
       
