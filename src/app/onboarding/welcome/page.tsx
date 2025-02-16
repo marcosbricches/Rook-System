@@ -3,12 +3,13 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
-import { ArrowRight, Building2, CheckCircle, ClipboardList, PlayCircle, Settings, Users } from "lucide-react"
+import { ArrowRight, Building2, CheckCircle, FileText, PlayCircle, Settings, Users } from "lucide-react"
 import Link from "next/link"
 
 export default function WelcomePage() {
   return (
-    <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">      {/* Background Pattern */}
+    <div className="min-h-screen w-full bg-gradient-to-b from-background via-background/95 to-background/90">
+      {/* Background Pattern */}
       <div className="absolute inset-0 bg-grid-white/10 bg-[size:60px_60px]" />
       
       {/* Welcome Header */}
@@ -126,44 +127,47 @@ export default function WelcomePage() {
           </CardHeader>
           <CardContent>
             <div className="grid md:grid-cols-3 gap-4">
-              {/* Video Tutorial */}
-              <Card className="group hover:shadow-md transition-all">
-                <CardHeader className="flex flex-row items-center gap-4">
-                  <div className="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors">
-                    <PlayCircle className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-base">Vídeo Tutorial</CardTitle>
-                    <CardDescription>Guia passo a passo</CardDescription>
-                  </div>
-                </CardHeader>
-              </Card>
-
-              {/* Documentation */}
-              <Card className="group hover:shadow-md transition-all">
-                <CardHeader className="flex flex-row items-center gap-4">
-                  <div className="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors">
-                    <ClipboardList className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-base">Documentação</CardTitle>
-                    <CardDescription>Material completo</CardDescription>
-                  </div>
-                </CardHeader>
-              </Card>
-
-              {/* Settings Guide */}
-              <Card className="group hover:shadow-md transition-all">
-                <CardHeader className="flex flex-row items-center gap-4">
-                  <div className="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors">
-                    <Settings className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-base">Guia de Configurações</CardTitle>
-                    <CardDescription>Dicas e melhores práticas</CardDescription>
-                  </div>
-                </CardHeader>
-              </Card>
+              <Link href="/onboarding/tutorial">
+                                <Card className="group hover:shadow-lg transition-all">
+                                  <CardHeader className="flex flex-row items-center gap-4">
+                                    <div className="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors">
+                                      <PlayCircle className="w-5 h-5 text-primary" />
+                                    </div>
+                                    <div>
+                                      <CardTitle className="text-base">Tutorial</CardTitle>
+                                      <CardDescription>Vídeos explicativos</CardDescription>
+                                    </div>
+                                  </CardHeader>
+                                </Card>
+                              </Link>
+              
+                              <Link href="/onboarding/documentation">
+                              <Card className="group hover:shadow-lg transition-all">
+                                <CardHeader className="flex flex-row items-center gap-4">
+                                  <div className="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors">
+                                    <FileText className="w-5 h-5 text-primary" />
+                                  </div>
+                                  <div>
+                                    <CardTitle className="text-base">Documentação</CardTitle>
+                                    <CardDescription>Guias detalhados</CardDescription>
+                                  </div>
+                                </CardHeader>
+                              </Card>
+                              </Link>
+              
+                              <Link href="/onboarding/support">
+                              <Card className="group hover:shadow-lg transition-all">
+                                <CardHeader className="flex flex-row items-center gap-4">
+                                  <div className="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors">
+                                    <Settings className="w-5 h-5 text-primary" />
+                                  </div>
+                                  <div>
+                                    <CardTitle className="text-base">Suporte</CardTitle>
+                                    <CardDescription>Central de ajuda</CardDescription>
+                                  </div>
+                                </CardHeader>
+                              </Card>
+                              </Link>
             </div>
           </CardContent>
         </Card>
