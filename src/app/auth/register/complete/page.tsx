@@ -240,7 +240,7 @@ import {
                     <span>Voltar</span>
                   </Button>
                 </Link>
-                <Link href="/dashboard">
+                <Link href="/onboarding/welcome">
                   <Button className="space-x-2">
                     <span>Finalizar Cadastro</span>
                   </Button>
