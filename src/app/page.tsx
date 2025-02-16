@@ -18,6 +18,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import Link from "next/link"
 
 export default function LandingPage() {
   return (
@@ -44,10 +45,12 @@ export default function LandingPage() {
           </p>
           
           <div className="flex gap-4">
+            <Link href="/auth/login">
             <Button size="lg" className="group">
               Teste Grátis por 14 dias
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
+            </Link>
             
             <Button variant="outline" size="lg">
               Agendar Demonstração
